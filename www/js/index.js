@@ -7,7 +7,7 @@ var app = {
 };
 
 var photograph=function() {
-  let url='http://harrysserver.com/camera/windward.php';
+  let url='http://harrysserver.com/camera/upload.php';
       CameraPreview.setFlashMode('off');
       CameraPreview.takePicture({height:1920, width:1080, quality:90}, function(base64PictureData) {
         var pic='data:image/jpeg;base64,'+base64PictureData;
@@ -16,7 +16,7 @@ var photograph=function() {
 }
 
 function photoDelay() {
-  return new Promise(resolve =>  setTimeout(resolve, 60000));
+  return new Promise(resolve =>  setTimeout(resolve, 600000));
 }
 
 async function photos() {
