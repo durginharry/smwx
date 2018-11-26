@@ -1,0 +1,28 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "org.apache.cordova.smwx"
+    },
+    "cordova-plugin-ios-camera-permissions": {
+      "CAMERA_USAGE_DESCRIPTION": "SMWX webcams",
+      "MICROPHONE_USAGE_DESCRIPTION": "This app needs microphone access",
+      "PHOTOLIBRARY_ADD_USAGE_DESCRIPTION": "This app needs write-access to photo library",
+      "PHOTOLIBRARY_USAGE_DESCRIPTION": "This app needs read/write-access photo library access",
+      "PACKAGE_NAME": "org.apache.cordova.smwx"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "org.apache.cordova.smwx"
+    },
+    "cordova-plugin-camera-preview": {
+      "PACKAGE_NAME": "org.apache.cordova.smwx"
+    }
+  },
+  "dependent_plugins": {}
+}
