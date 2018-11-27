@@ -16,7 +16,7 @@ var photograph=function() {
 }
 
 function photoDelay() {
-  return new Promise(resolve =>  setTimeout(resolve, 60000));
+  return new Promise(resolve =>  setTimeout(resolve, 600000));
 }
 
 async function photos() {
