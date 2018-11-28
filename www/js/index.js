@@ -3,7 +3,7 @@ var app = {
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
   },
   onDeviceReady: function() {
-    navigator.geolocation.getCurrentPosition(gotHere, gotError);
+    navigator.geolocation.getCurrentPosition(gotHere, gotError, {enableHighAccuracy: true, timeout: 20000, maximumAge: 10000});
   },
   receivedEvent: function(id) {}
 };
@@ -39,6 +39,6 @@ var gotHere = function(pos) {
 function gotError(e) {alert(e.code+'\n'+e.message);}
 
 app.initialize();
-CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
-CameraPreview.hide();
-processArray();
+//CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
+//CameraPreview.hide();
+//processArray();
