@@ -36,7 +36,7 @@ var gotHere = function(pos) {
   alert(2);
 };
 
-function gotError(e) {alert(e.code+'\n'+e.message);}
+function gotError(e) {alert('code='+e.code+'\n'+e.message);}
 
 app.initialize();
 //CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
