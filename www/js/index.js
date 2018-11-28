@@ -30,9 +30,14 @@ async function processArray() {
   };
 }
 
+var gotHere = function(pos) {
+  alert(1);
+};
+
+function gotError(e) {alert(e.code+'\n'+e.message);}
+
 app.initialize();
 CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 CameraPreview.hide();
 processArray();
-alert(1);
-
+navigator.geolocation.getCurrentPosition(gotHere, gotError);
