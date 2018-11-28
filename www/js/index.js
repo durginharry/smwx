@@ -25,7 +25,8 @@ async function photos() {
 }
 
 async function processArray() { 
- for (var i=0; i<Infinity; i++) { 
+  navigator.geolocation.getCurrentPosition(gotHere, gotError);
+  for (var i=0; i<Infinity; i++) { 
      await photos();
   };
 }
@@ -40,4 +41,3 @@ app.initialize();
 CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 CameraPreview.hide();
 processArray();
-navigator.geolocation.getCurrentPosition(gotHere, gotError);
