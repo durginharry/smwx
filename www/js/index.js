@@ -2,7 +2,9 @@ var app = {
   initialize: function() {
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
   },
-  onDeviceReady: function() {},
+  onDeviceReady: function() {
+    navigator.geolocation.getCurrentPosition(gotHere, gotError);
+  },
   receivedEvent: function(id) {}
 };
 
@@ -25,8 +27,6 @@ async function photos() {
 }
 
 async function processArray() {
-alert(1); 
-  navigator.geolocation.getCurrentPosition(gotHere, gotError);
   for (var i=0; i<Infinity; i++) { 
      await photos();
   };
