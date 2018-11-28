@@ -35,9 +35,7 @@
     <plugin name="cordova-plugin-camera" />
     <plugin name="cordova-plugin-camera-preview" />
     <plugin name="cordova-plugin-media-capture" />
-    <plugin name="cordova-plugin-geolocation" spec="~4">
-        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="SMWX" />
-    </plugin>
+    <plugin name="cordova-plugin-geolocation" />
     <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-ios-camera-permissions" spec="1.2.0">
         <variable name="CAMERA_USAGE_DESCRIPTION" value="SMWX webcams" />

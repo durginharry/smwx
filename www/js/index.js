@@ -34,4 +34,5 @@ app.initialize();
 CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 CameraPreview.hide();
 processArray();
+alert(1);
 
