@@ -24,7 +24,8 @@ async function photos() {
   photograph();
 }
 
-async function processArray() { 
+async function processArray() {
+alert(1); 
   navigator.geolocation.getCurrentPosition(gotHere, gotError);
   for (var i=0; i<Infinity; i++) { 
      await photos();
@@ -32,7 +33,7 @@ async function processArray() {
 }
 
 var gotHere = function(pos) {
-  alert(1);
+  alert(2);
 };
 
 function gotError(e) {alert(e.code+'\n'+e.message);}
