@@ -38,7 +38,7 @@ var gotHere = function(pos) {
 function gotError(e) {alert('code='+e.code+'\n'+e.message);}
 
 app.initialize();
-navigator.geolocation.getCurrentPosition(gotHere, gotError, {enableHighAccuracy: true, timeout: 20000, maximumAge: 10000});
 CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 CameraPreview.hide();
+navigator.geolocation.getCurrentPosition(gotHere, gotError, {enableHighAccuracy: true, timeout: 20000, maximumAge: 10000});
 processArray();
