@@ -31,14 +31,19 @@ async function processArray() {
   };
 }
 
-var gotHere = function(pos) {
-  alert(2);
-};
-
 function gotError(e) {alert('code='+e.code+'\n'+e.message);}
 
 app.initialize();
 CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 CameraPreview.hide();
-navigator.geolocation.getCurrentPosition(gotHere, gotError, {enableHighAccuracy: true, timeout: 20000, maximumAge: 10000});
+
+function onSuccess(position) {
+  alert('Latitude: '+position.coords.latitude+' Longitude: '+position.coords.longitude);
+}
+
+function onError(error) {
+  alert('code: '+error.code+'\n'+'message: ' + error.message + '\n');
+}
+var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
+
 processArray();
