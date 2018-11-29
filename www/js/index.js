@@ -3,6 +3,9 @@ var app = {
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
   },
   onDeviceReady: function() {
+alert(1);
+navigator.geolocation.getPosition(onSuccess, onError, { timeout: 10000 });
+alert(2);
   },
   receivedEvent: function(id) {}
 };
@@ -31,16 +34,15 @@ async function processArray() {
   };
 }
 
-function onError(e) {alert('code='+e.code+'\n'+e.message);}
+function onError(e) {
+  alert('code='+e.code+'\n'+e.message);
+}
 
 function onSuccess(position) {
   alert('Latitude: '+position.coords.latitude+' Longitude: '+position.coords.longitude);
 }
 
 app.initialize();
-alert(1);
-navigator.geolocation.getPosition(onSuccess, onError, { timeout: 10000 });
-alert(2);
 //CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 //CameraPreview.hide();
 //processArray();
