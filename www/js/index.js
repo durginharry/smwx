@@ -33,17 +33,14 @@ async function processArray() {
 
 function gotError(e) {alert('code='+e.code+'\n'+e.message);}
 
-app.initialize();
-CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
-CameraPreview.hide();
-
 function onSuccess(position) {
   alert('Latitude: '+position.coords.latitude+' Longitude: '+position.coords.longitude);
 }
 
-function onError(error) {
-  alert('code: '+error.code+'\n'+'message: ' + error.message + '\n');
-}
-var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { timeout: 30000 });
+app.initialize();
+CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
+CameraPreview.hide();
+
+var watchID = navigator.geolocation.getPosition(onSuccess, onError, { timeout: 30000 });
 
 processArray();
