@@ -1,9 +1,6 @@
 var app = {
   initialize: function() {
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-alert(1);
-navigator.geolocation.getPosition(onSuccess, onError, { timeout: 10000 });
-alert(2);
   },
   onDeviceReady: function() {
   },
@@ -43,6 +40,9 @@ function onSuccess(position) {
 }
 
 app.initialize();
+alert(1);
+this.geolocation.getPosition(onSuccess, onError, { timeout: 10000 });
+alert(2);
 //CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 //CameraPreview.hide();
 //processArray();
