@@ -20,6 +20,11 @@
       "PHOTOLIBRARY_USAGE_DESCRIPTION": "This app needs read/write-access photo library access",
       "PACKAGE_NAME": "com.harry.camera"
     },
+    "cordova-plugin-ios-location-permissions": {
+      "LOCATION_WHEN_IN_USAGE_DESCRIPTION": "This app needs contact access",
+      "LOCATION_ALWAYS_AND_WHEN_IN_USAGE_DESCRIPTION": "This app needs contact access",
+      "PACKAGE_NAME": "com.harry.camera"
+    },
     "cordova-plugin-media-capture": {
       "PACKAGE_NAME": "com.harry.camera"
     },

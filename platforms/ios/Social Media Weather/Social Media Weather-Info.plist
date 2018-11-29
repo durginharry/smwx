@@ -62,5 +62,7 @@
     <string>This app needs write-access to photo library</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>This app needs read/write-access photo library access</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>This app needs contact access</string>
   </dict>
 </plist>

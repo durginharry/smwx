@@ -283,6 +283,7 @@ module.exports.metadata =
   "cordova-plugin-camera-preview": "0.10.0",
   "cordova-plugin-file": "6.0.1",
   "cordova-plugin-ios-camera-permissions": "1.2.0",
+  "cordova-plugin-ios-location-permissions": "1.2.0",
   "cordova-plugin-media-capture": "3.0.2",
   "cordova-plugin-whitelist": "1.3.3",
   "org.apache.cordova.geolocation": "0.3.6"
