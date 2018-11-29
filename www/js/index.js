@@ -31,7 +31,7 @@ async function processArray() {
   };
 }
 
-function gotError(e) {alert('code='+e.code+'\n'+e.message);}
+function onError(e) {alert('code='+e.code+'\n'+e.message);}
 
 function onSuccess(position) {
   alert('Latitude: '+position.coords.latitude+' Longitude: '+position.coords.longitude);
