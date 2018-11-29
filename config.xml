@@ -22,7 +22,6 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <engine name="ios" />
     <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
         <string>SMWx</string>
     </edit-config>
@@ -33,5 +32,6 @@
     <plugin name="cordova-plugin-ios-camera-permissions" spec="1.2.0">
         <variable name="CAMERA_USAGE_DESCRIPTION" value="SMWX webcams" />
     </plugin>
-    <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
+    <plugin name="org.apache.cordova.geolocation" spec="^0.3.6" />
+    <engine name="ios" spec="~4.5.5" />
 </widget>

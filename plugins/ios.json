@@ -7,22 +7,32 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "org.apache.cordova.smwx"
+    "cordova-plugin-camera-preview": {
+      "PACKAGE_NAME": "com.harry.camera"
     },
     "cordova-plugin-ios-camera-permissions": {
       "CAMERA_USAGE_DESCRIPTION": "SMWX webcams",
       "MICROPHONE_USAGE_DESCRIPTION": "This app needs microphone access",
       "PHOTOLIBRARY_ADD_USAGE_DESCRIPTION": "This app needs write-access to photo library",
       "PHOTOLIBRARY_USAGE_DESCRIPTION": "This app needs read/write-access photo library access",
-      "PACKAGE_NAME": "org.apache.cordova.smwx"
+      "PACKAGE_NAME": "com.harry.camera"
     },
-    "cordova-plugin-geolocation": {
-      "PACKAGE_NAME": "org.apache.cordova.smwx"
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.harry.camera"
     },
-    "cordova-plugin-camera-preview": {
-      "PACKAGE_NAME": "org.apache.cordova.smwx"
+    "org.apache.cordova.geolocation": {
+      "PACKAGE_NAME": "com.harry.camera"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.harry.camera"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.harry.camera"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.harry.camera"
+    }
+  }
 }
