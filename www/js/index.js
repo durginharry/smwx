@@ -1,11 +1,11 @@
 var app = {
   initialize: function() {
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-  },
-  onDeviceReady: function() {
 alert(1);
 navigator.geolocation.getPosition(onSuccess, onError, { timeout: 10000 });
 alert(2);
+  },
+  onDeviceReady: function() {
   },
   receivedEvent: function(id) {}
 };
