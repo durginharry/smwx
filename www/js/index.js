@@ -38,7 +38,9 @@ function onSuccess(position) {
 }
 
 app.initialize();
-navigator.geolocation.getPosition(onSuccess, onError, { timeout: 30000 });
+alert(1);
+navigator.geolocation.getPosition(onSuccess, onError, { timeout: 10000 });
+alert(2);
 //CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 //CameraPreview.hide();
 //processArray();
