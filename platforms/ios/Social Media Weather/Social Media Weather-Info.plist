@@ -52,6 +52,8 @@
       <key>NSAllowsArbitraryLoads</key>
       <true/>
     </dict>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>SMWx</string>
     <key>NSCameraUsageDescription</key>
     <string>SMWX webcams</string>
     <key>NSMicrophoneUsageDescription</key>
@@ -60,11 +62,7 @@
     <string>This app needs write-access to photo library</string>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>This app needs read/write-access photo library access</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>SMWx</string>
-    <key>NSLocationAlwaysUsageDescription</key>
-    <string>SMWx</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>SMWx</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>This app needs contact access</string>
   </dict>
 </plist>

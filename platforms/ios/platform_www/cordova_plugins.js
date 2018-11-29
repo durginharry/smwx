@@ -1,14 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
-    "id": "cordova-plugin-camera-preview.CameraPreview",
-    "file": "plugins/cordova-plugin-camera-preview/www/CameraPreview.js",
-    "pluginId": "cordova-plugin-camera-preview",
-    "clobbers": [
-      "CameraPreview"
-    ]
-  },
-  {
     "id": "cordova-plugin-camera.Camera",
     "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
     "pluginId": "cordova-plugin-camera",
@@ -38,6 +30,14 @@ module.exports = [
     "pluginId": "cordova-plugin-camera",
     "clobbers": [
       "CameraPopoverHandle"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera-preview.CameraPreview",
+    "file": "plugins/cordova-plugin-camera-preview/www/CameraPreview.js",
+    "pluginId": "cordova-plugin-camera-preview",
+    "clobbers": [
+      "CameraPreview"
     ]
   },
   {
@@ -279,13 +279,14 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-  "cordova-plugin-camera-preview": "0.10.0",
-  "cordova-plugin-ios-camera-permissions": "1.2.0",
-  "cordova-plugin-whitelist": "1.3.3",
-  "org.apache.cordova.geolocation": "0.3.6",
   "cordova-plugin-camera": "4.0.3",
+  "cordova-plugin-camera-preview": "0.10.0",
   "cordova-plugin-file": "6.0.1",
-  "cordova-plugin-media-capture": "3.0.2"
+  "cordova-plugin-ios-camera-permissions": "1.2.0",
+  "cordova-plugin-ios-location-permissions": "1.2.0",
+  "cordova-plugin-media-capture": "3.0.2",
+  "cordova-plugin-whitelist": "1.3.3",
+  "org.apache.cordova.geolocation": "0.3.6"
 };
 // BOTTOM OF METADATA
 });

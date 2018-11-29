@@ -7,6 +7,9 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.harry.camera"
+    },
     "cordova-plugin-camera-preview": {
       "PACKAGE_NAME": "com.harry.camera"
     },
@@ -17,16 +20,18 @@
       "PHOTOLIBRARY_USAGE_DESCRIPTION": "This app needs read/write-access photo library access",
       "PACKAGE_NAME": "com.harry.camera"
     },
+    "cordova-plugin-ios-location-permissions": {
+      "LOCATION_WHEN_IN_USAGE_DESCRIPTION": "This app needs contact access",
+      "LOCATION_ALWAYS_AND_WHEN_IN_USAGE_DESCRIPTION": "This app needs contact access",
+      "PACKAGE_NAME": "com.harry.camera"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.harry.camera"
+    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.harry.camera"
     },
     "org.apache.cordova.geolocation": {
-      "PACKAGE_NAME": "com.harry.camera"
-    },
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.harry.camera"
-    },
-    "cordova-plugin-media-capture": {
       "PACKAGE_NAME": "com.harry.camera"
     }
   },
