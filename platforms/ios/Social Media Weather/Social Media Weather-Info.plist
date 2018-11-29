@@ -62,5 +62,9 @@
     <string>This app needs read/write-access photo library access</string>
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>SMWx</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>SMWx</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>SMWx</string>
   </dict>
 </plist>
