@@ -40,9 +40,7 @@ function onSuccess(position) {
 }
 
 app.initialize();
-alert(1);
 navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 10000 });
-alert(2);
 //CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 //CameraPreview.hide();
 //processArray();
