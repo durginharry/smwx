@@ -38,10 +38,8 @@ function onSuccess(position) {
 }
 
 app.initialize();
-alert(1);
 CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 CameraPreview.hide();
-alert(2);
 var watchID = navigator.geolocation.getPosition(onSuccess, onError, { timeout: 30000 });
 
 processArray();
