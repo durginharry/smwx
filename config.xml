@@ -19,7 +19,6 @@
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
-        <plugin name="Geolocation" value="CDVLocation" />
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysAndWhenInUseUsageDescription">
@@ -41,5 +40,4 @@
     <plugin name="cordova-plugin-ios-camera-permissions" spec="1.2.0">
         <variable name="CAMERA_USAGE_DESCRIPTION" value="SMWX webcams" />
     </plugin>
-    <plugin name="org.apache.cordova.geolocation" spec="^0.3.6" />
 </widget>
