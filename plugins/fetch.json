@@ -59,13 +59,5 @@
     },
     "is_top_level": false,
     "variables": {}
-  },
-  "cordova-plugin-ios-location-permissions": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-ios-location-permissions@^1.0.0"
-    },
-    "is_top_level": true,
-    "variables": {}
   }
 }

@@ -31,7 +31,9 @@ async function processArray() {
   };
 }
 
-function onError(e) {alert('code='+e.code+'\n'+e.message);}
+function onError(e) {
+  alert('code='+e.code+'\n'+e.message);
+}
 
 function onSuccess(position) {
   alert('Latitude: '+position.coords.latitude+' Longitude: '+position.coords.longitude);
@@ -39,7 +41,7 @@ function onSuccess(position) {
 
 app.initialize();
 alert(1);
-navigator.geolocation.getPosition(onSuccess, onError, { timeout: 10000 });
+navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 10000 });
 alert(2);
 //CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 //CameraPreview.hide();

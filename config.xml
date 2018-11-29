@@ -33,9 +33,5 @@
         <variable name="CAMERA_USAGE_DESCRIPTION" value="SMWX webcams" />
     </plugin>
     <plugin name="org.apache.cordova.geolocation" spec="^0.3.6" />
-    <plugin name="cordova-plugin-ios-location-permissions" spec="1.0.0">
-        <variable name="LOCATION_WHEN_IN_USAGE_DESCRIPTION" value="This app needs contact access" />
-        <variable name="LOCATION_ALWAYS_AND_WHEN_IN_USAGE_DESCRIPTION" value="This app needs contact access" />
-    </plugin>
     <engine name="ios" spec="~4.5.5" />
 </widget>
