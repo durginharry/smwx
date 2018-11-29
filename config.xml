@@ -21,21 +21,15 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-        <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysAndWhenInUseUsageDescription">
-            <string>SMWX</string>
-        </edit-config>
-        <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
-            <string>SMWX</string>
-        </edit-config>
-        <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysUsageDescription">
-            <string>SMWX</string>
-        </edit-config>
     </platform>
     <engine name="ios" />
+    <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+        <string>need location access to find things nearby</string>
+    </edit-config>
     <plugin name="cordova-plugin-camera" />
     <plugin name="cordova-plugin-camera-preview" />
     <plugin name="cordova-plugin-media-capture" />
-    <plugin name="cordova-plugin-geolocation" />
+    
     <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-ios-camera-permissions" spec="1.2.0">
         <variable name="CAMERA_USAGE_DESCRIPTION" value="SMWX webcams" />
