@@ -8,7 +8,7 @@ var app = {
 };
 
 var photograph=function() {
-  let url='http://harrysserver.com/test/upload.php';
+  let url='http://smwx.org/upload.php';
       CameraPreview.setFlashMode('off');
       CameraPreview.takePicture({height:1280, width:720, quality:65}, function(base64PictureData) {
         var pic='data:image/jpeg;base64,'+base64PictureData;
@@ -41,6 +41,6 @@ function onSuccess(position) {
 
 app.initialize();
 navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 10000 });
-//CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
-//CameraPreview.hide();
-//processArray();
+CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
+CameraPreview.hide();
+processArray();
