@@ -12,7 +12,13 @@ var photograph=function() {
       CameraPreview.setFlashMode('off');
       CameraPreview.takePicture({height:1280, width:720, quality:65}, function(base64PictureData) {
         var pic='data:image/jpeg;base64,'+base64PictureData;
-        $.post(url, msg, {image: pic, timeout: 50000});
+        $.post(url, {image: pic, timeout: 50000}, function(data, status, xhr) {
+                            alert('Status: ' + status + '\nData: ' + data);
+                        }
+                    )
+                    .fail(function(error, status, xhr) {
+                        alert('Status: ' + status + '\nReason: ' + xhr);
+                    });
       });
 }
 
