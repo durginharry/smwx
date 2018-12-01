@@ -1,3 +1,6 @@
+var lat = 0;
+var lon = 0;
+
 var app = {
   initialize: function() {
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -13,7 +16,7 @@ var photograph=function() {
       CameraPreview.takePicture({height:1280, width:720, quality:65}, function(base64PictureData) {
         var pic='data:image/jpeg;base64,'+base64PictureData;
         
-        $.post(url, {image: pic, lat: position.coords.latitude, long: position.coords.longitude, timeout: 50000}, function(data, status, xhr) {
+        $.post(url, {image: pic, lat: lat, lon: lon, timeout: 50000}, function(data, status, xhr) {
                             alert('return: ' + status + '\nData: ' + data);
                         }
                     )
