@@ -1,3 +1,6 @@
+var lat = 123;
+var lon = 456;
+
 var app = {
   initialize: function() {
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -24,7 +27,7 @@ var photograph=function() {
 }
 
 function photoDelay() {
-  return new Promise(resolve =>  setTimeout(resolve, 60000));
+  return new Promise(resolve =>  setTimeout(resolve, 20000));
 }
 
 function msg(m) {
