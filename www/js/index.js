@@ -1,6 +1,3 @@
-var lat = 0;
-var lon = 0;
-
 var app = {
   initialize: function() {
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
