@@ -13,7 +13,7 @@ var photograph=function() {
       CameraPreview.takePicture({height:1280, width:720, quality:65}, function(base64PictureData) {
         var pic='data:image/jpeg;base64,'+base64PictureData;
         
-        $.post(url, {image: pic, timeout: 50000}, function(data, status, xhr) {
+        $.post(url, {image: pic, lat: 123, timeout: 50000}, function(data, status, xhr) {
                             alert('return: ' + status + '\nData: ' + data);
                         }
                     )
