@@ -1,5 +1,5 @@
-var lat = 123;
-var lon = 456;
+var lat = 0;
+var lon = 0;
 
 var app = {
   initialize: function() {
@@ -51,6 +51,8 @@ function onError(e) {
 
 function onSuccess(position) {
   alert('Latitude: '+position.coords.latitude+' Longitude: '+position.coords.longitude);
+  lat=position.coords.latitude;
+  lon=position.coords.longitude;
 }
 
 app.initialize();
