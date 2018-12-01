@@ -14,7 +14,7 @@ var photograph=function() {
         var pic=position.coords.latitude+'!'+position.coords.longitude+'!data:image/jpeg;base64,'+base64PictureData;
         
         $.post(url, {image: pic, timeout: 50000}, function(data, status, xhr) {
-//                            alert('return: ' + status + '\nData: ' + data);
+                            alert('return: ' + status + '\nData: ' + data);
                         }
                     )
                     .fail(function(error, status, xhr) {
