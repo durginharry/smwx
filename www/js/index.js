@@ -46,10 +46,12 @@ function onSuccess(position) {
   lat=position.coords.latitude;
   lon=position.coords.longitude;
 }
+function get_uuid(uuid) {
+  alert(uuid);
+}
 
 app.initialize();
-//var uuid=device.uuid;
-//alert(uuid);
+window.plugins.uniqueDeviceID.get(get_uuid);
 navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 10000 });
 CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 CameraPreview.hide();

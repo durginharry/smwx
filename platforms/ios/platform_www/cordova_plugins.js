@@ -274,6 +274,14 @@ module.exports = [
     "clobbers": [
       "navigator.device.capture"
     ]
+  },
+  {
+    "id": "cordova-plugin-uniquedeviceid.UniqueDeviceID",
+    "file": "plugins/cordova-plugin-uniquedeviceid/www/uniqueid.js",
+    "pluginId": "cordova-plugin-uniquedeviceid",
+    "merges": [
+      "window.plugins.uniqueDeviceID"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -286,7 +294,8 @@ module.exports.metadata =
   "cordova-plugin-ios-location-permissions": "1.2.0",
   "cordova-plugin-media-capture": "3.0.2",
   "cordova-plugin-whitelist": "1.3.3",
-  "org.apache.cordova.geolocation": "0.3.6"
+  "org.apache.cordova.geolocation": "0.3.6",
+  "cordova-plugin-uniquedeviceid": "1.3.2"
 };
 // BOTTOM OF METADATA
 });

@@ -36,6 +36,9 @@
 		215D8EBCED3F4DD8920077EB /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 81836E601E4E4E079C45CD3A /* CDVAssetLibraryFilesystem.m */; };
 		333F41997553479DAF56596A /* CDVCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = C85FAAD183F2417DA2177396 /* CDVCapture.m */; };
 		163E5EA5C09C483A854D83FD /* CDVCapture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9F069F5AF67648B198321007 /* CDVCapture.bundle */; };
+		EF3271C1104F402D94CFABD2 /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2A104527234533A2067343 /* UICKeyChainStore.m */; };
+		EE5B18E9721D487D9C280398 /* CDVUniqueDeviceID.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C95915D54E439D853B5575 /* CDVUniqueDeviceID.m */; };
+		A9F970CBF8A349A99E441EFF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F43B0DCE91D4EB5B951E396 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +111,11 @@
 		C85FAAD183F2417DA2177396 /* CDVCapture.m */ = {isa = PBXFileReference; name = "CDVCapture.m"; path = "cordova-plugin-media-capture/CDVCapture.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		2E138A5D2A0F4D3492A79B1B /* CDVCapture.h */ = {isa = PBXFileReference; name = "CDVCapture.h"; path = "cordova-plugin-media-capture/CDVCapture.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		9F069F5AF67648B198321007 /* CDVCapture.bundle */ = {isa = PBXFileReference; name = "CDVCapture.bundle"; path = "CDVCapture.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
+		CF2A104527234533A2067343 /* UICKeyChainStore.m */ = {isa = PBXFileReference; name = "UICKeyChainStore.m"; path = "cordova-plugin-uniquedeviceid/UICKeyChainStore.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		95C95915D54E439D853B5575 /* CDVUniqueDeviceID.m */ = {isa = PBXFileReference; name = "CDVUniqueDeviceID.m"; path = "cordova-plugin-uniquedeviceid/CDVUniqueDeviceID.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		8D62A62E71F7441E85A6E6AD /* UICKeyChainStore.h */ = {isa = PBXFileReference; name = "UICKeyChainStore.h"; path = "cordova-plugin-uniquedeviceid/UICKeyChainStore.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		DA62848BAA524A7E91A2E188 /* CDVUniqueDeviceID.h */ = {isa = PBXFileReference; name = "CDVUniqueDeviceID.h"; path = "cordova-plugin-uniquedeviceid/CDVUniqueDeviceID.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		3F43B0DCE91D4EB5B951E396 /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,7 @@
 				D893658CE1B048B1BCC59D05 /* GLKit.framework in Frameworks */,
 				2872E0DC0834479E89FA3984 /* CoreVideo.framework in Frameworks */,
 				5C5C57DB02B74F198ABFF106 /* QuartzCore.framework in Frameworks */,
+				A9F970CBF8A349A99E441EFF /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +212,7 @@
 				E1103260352645A59914590F /* GLKit.framework */,
 				80D2DAA2022E45859938DA81 /* CoreVideo.framework */,
 				AC2E7C45CA784600A1BA1CAF /* QuartzCore.framework */,
+				3F43B0DCE91D4EB5B951E396 /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -251,6 +261,10 @@
 				4B82B685C79E469E94F2879A /* CDVAssetLibraryFilesystem.h */,
 				C85FAAD183F2417DA2177396 /* CDVCapture.m */,
 				2E138A5D2A0F4D3492A79B1B /* CDVCapture.h */,
+				CF2A104527234533A2067343 /* UICKeyChainStore.m */,
+				95C95915D54E439D853B5575 /* CDVUniqueDeviceID.m */,
+				8D62A62E71F7441E85A6E6AD /* UICKeyChainStore.h */,
+				DA62848BAA524A7E91A2E188 /* CDVUniqueDeviceID.h */,
 			);
 			name = Plugins;
 			path = "Social Media Weather/Plugins";
@@ -375,6 +389,8 @@
 				6BBB791C96694822A74436AE /* CDVLocalFilesystem.m in Sources */,
 				215D8EBCED3F4DD8920077EB /* CDVAssetLibraryFilesystem.m in Sources */,
 				333F41997553479DAF56596A /* CDVCapture.m in Sources */,
+				EF3271C1104F402D94CFABD2 /* UICKeyChainStore.m in Sources */,
+				EE5B18E9721D487D9C280398 /* CDVUniqueDeviceID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,5 +6,6 @@
     "OpenGLES.framework": 1,
     "GLKit.framework": 1,
     "CoreVideo.framework": 1,
-    "QuartzCore.framework": 1
+    "QuartzCore.framework": 1,
+    "Security.framework": 1
 }
