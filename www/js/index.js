@@ -20,7 +20,7 @@ var photograph=function() {
 }
 
 function photoDelay() {
-  return new Promise(resolve =>  setTimeout(resolve, 300000));
+  return new Promise(resolve =>  setTimeout(resolve, 15000));
 }
 
 function msg(m) {
@@ -43,7 +43,6 @@ function onError(e) {
 }
 
 function onSuccess(position) {
-  alert('Latitude: '+position.coords.latitude+' Longitude: '+position.coords.longitude);
   lat=position.coords.latitude;
   lon=position.coords.longitude;
 }
