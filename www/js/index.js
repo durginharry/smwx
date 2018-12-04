@@ -48,7 +48,7 @@ function onSuccess(position) {
 }
 
 app.initialize();
-var uuid=device.uuid;
+//var uuid=device.uuid;
 //alert(uuid);
 navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 10000 });
 CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
