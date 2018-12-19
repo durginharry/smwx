@@ -17,8 +17,15 @@ var photograph=function() {
       CameraPreview.setFlashMode('off');
       CameraPreview.takePicture({height:1280, width:720, quality:65}, function(base64PictureData) {
         var pic='data:image/jpeg;base64,'+base64PictureData;
-        $.post(url, {image: pic, lat: lat, lon: lon, uuid: uuid, timeout: 50000}, function(data, status, xhr) { }).fail(function(error, status, xhr) { });
+        $.post(url, {image: pic, lat: lat, lon: lon, uuid: uuid, timeout: 5000}, function(data, status, xhr) { }).fail(function(error, status, xhr) { });
       });
+}
+
+function params=function() {
+   let url='http://smwx.org/params.php';
+   $.post(url, {uuid: uuid, timeout: 5000}, function(data, status, xhr).fail(function(error, status, xhr) {
+     alert(data);
+   });
 }
 
 function photoDelay() {
@@ -30,7 +37,8 @@ function msg(m) {
 }
 
 async function photos() {
-  await photoDelay();  
+  await photoDelay();
+  params(); 
   photograph();
 }
 
