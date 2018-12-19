@@ -23,8 +23,8 @@ var photograph=function() {
 
 function params=function() {
    let url='http://smwx.org/params.php';
-   $.post(url, {uuid: uuid, timeout: 5000}, function(data, status, xhr).fail(function(error, status, xhr) {
-     alert(data);
+   $.post(url, {uuid: uuid, timeout: 5000}, function(data, status, xhr) {
+     msg(data)
    });
 }
 
