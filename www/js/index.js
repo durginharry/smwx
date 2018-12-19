@@ -24,7 +24,7 @@ var photograph=function() {
 function params=function() {
    let url='http://smwx.org/params.php';
    $.post(url, {uuid: uuid, timeout: 5000}, function(data, status, xhr) {
-     msg(data)
+     msg(data);
    });
 }
 
