@@ -1,6 +1,7 @@
 var lat = 0;
 var lon = 0;
 var uuid = 0;
+var interval = 60000;
 
 var app = {
   initialize: function() {
@@ -21,7 +22,7 @@ var photograph=function() {
 }
 
 function photoDelay() {
-  return new Promise(resolve =>  setTimeout(resolve, 1*60*1000));
+  return new Promise(resolve =>  setTimeout(resolve, interval));
 }
 
 function msg(m) {
