@@ -30,6 +30,7 @@ var params=function() {
     interval = $params[0]*1000;
     image_width = $params[1];
     image_quality = $params[2]; 
+alert(image_quality);
   });
 }
 
