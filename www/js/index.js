@@ -2,8 +2,8 @@ var lat = 0;
 var lon = 0;
 var uuid = 0;
 var interval = 60000;
-var image_width = 2450;
-var image_height = 500;
+var image_width = 500;
+var image_height = 2450;
 var image_quality = 65;
 
 var app = {
