@@ -24,10 +24,13 @@ var photograph=function() {
 }
 
 var params=function() {
-   let url='http://smwx.org/params.php';
-   $.post(url, {uuid: uuid, timeout: 5000}, function(data, status, xhr) {
-     interval = data*1000; 
-   });
+  let url='http://smwx.org/params.php';
+  $.post(url, {uuid: uuid, timeout: 5000}, function($data, status, xhr) {
+    $params = explode(',',$data);
+    interval = $params[0];
+    image_width = $params[1];
+    image_quality = $params[2]; 
+  });
 }
 
 function photoDelay() {
