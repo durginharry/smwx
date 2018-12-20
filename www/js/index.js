@@ -2,8 +2,7 @@ var lat = 0;
 var lon = 0;
 var uuid = 0;
 var interval = 60000;
-var image_height = 2000;
-var image_width = 1500;
+var image_width = 3000;
 var image_quality = 65;
 
 var app = {
@@ -18,7 +17,7 @@ var app = {
 var photograph=function() {
   let url='http://smwx.org/upload.php';
       CameraPreview.setFlashMode('off');
-      CameraPreview.takePicture({height:image_height, width:image_width, quality:image_quality}, function(base64PictureData) {
+      CameraPreview.takePicture({width:image_width, quality:image_quality}, function(base64PictureData) {
         var pic='data:image/jpeg;base64,'+base64PictureData;
         $.post(url, {image: pic, lat: lat, lon: lon, uuid: uuid, timeout: 5000}, function(data, status, xhr) { }).fail(function(error, status, xhr) { });
       });
