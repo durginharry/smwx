@@ -25,8 +25,8 @@ var photograph=function() {
 
 var params=function() {
   let url='http://smwx.org/params.php';
-alert('got here');
   $.post(url, {uuid: uuid, timeout: 5000}, function(data, status, xhr) {
+alert(data);
     $params = explode(',',data);
     interval = $params[0]*1000;
     image_width = $params[1];
