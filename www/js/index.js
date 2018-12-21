@@ -1,9 +1,11 @@
 lat = 0;
 lon = 0;
 uuid = 0;
-interval = 60000;
+interval = 10000;
 max_length = 1000;
 image_quality = 65;
+url_upload = 'http://smwx.org/upload.php';
+url_params = 'http://smwx.org/params.php';
 
 app = {
   initialize: function() {
@@ -15,20 +17,18 @@ app = {
 };
 
 photograph = function() {
-  let url = 'http://smwx.org/upload.php';
   CameraPreview.setFlashMode('off');
   CameraPreview.takePicture({height: max_length, width: max_length, quality: image_quality}, function(base64PictureData) {
     pic = 'data:image/jpeg;base64,'+base64PictureData;
-    $.post(url, {image: pic, lat: lat, lon: lon, uuid: uuid, timeout: 5000}, function(data, status, xhr) { }).fail(function(error, status, xhr) { });
+    $.post(url_upload, {image: pic, lat: lat, lon: lon, uuid: uuid, timeout: 5000}, function(data, status, xhr) { }).fail(function(error, status, xhr) { });
   });
 }
 
 params = function() {
-  let url = 'http://smwx.org/params.php';
-  $.post(url, {uuid: uuid, timeout: 5000}, function(smwx_params, status, xhr) {
+  $.post(url_params, {uuid: uuid, timeout: 5000}, function(smwx_params, status, xhr) {
     params = smwx_params.split(",");
     interval = params[0]*1000;
-    image_width = params[1];
+    max_length = params[1];
     image_quality = params[2];
   });
 }
@@ -43,8 +43,11 @@ function msg(m) {
 
 async function photos() {
   await photoDelay();
-  params(); 
+alert(1);
+  params();
+alert(2); 
   photograph();
+alert(3);
 }
 
 async function processArray() {
@@ -61,6 +64,7 @@ function onSuccess(position) {
   lat = position.coords.latitude;
   lon = position.coords.longitude;
 }
+
 function get_uuid(uuid_value) {
   uuid = uuid_value;
 }
