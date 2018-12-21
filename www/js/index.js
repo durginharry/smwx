@@ -43,10 +43,8 @@ alert(1);
     image_quality = params[2];
   });
 alert(2); 
-  params();
-alert(3);
   photograph();
-alert(4);
+alert(3);
 }
 
 async function processArray() {
