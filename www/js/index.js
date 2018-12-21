@@ -24,16 +24,6 @@ photograph = function() {
   });
 }
 
-params = function() {
-alert(4);
-  $.post(url_params, {uuid: uuid, timeout: 5000}, function(smwx_params, status, xhr) {
-    params = smwx_params.split(",");
-    interval = params[0]*1000;
-    max_length = params[1];
-    image_quality = params[2];
-  });
-}
-
 function photoDelay() {
   return new Promise(resolve =>  setTimeout(resolve, interval));
 }
@@ -43,12 +33,20 @@ function msg(m) {
 }
 
 async function photos() {
+alert(0);
   await photoDelay();
 alert(1);
-  params();
+  $.post(url_params, {uuid: uuid, timeout: 5000}, function(smwx_params, status, xhr) {
+    params = smwx_params.split(",");
+    interval = params[0]*1000;
+    max_length = params[1];
+    image_quality = params[2];
+  });
 alert(2); 
-  photograph();
+  params();
 alert(3);
+  photograph();
+alert(4);
 }
 
 async function processArray() {
