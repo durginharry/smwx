@@ -1,9 +1,9 @@
-var lat = 0;
-var lon = 0;
-var uuid = 0;
-var interval = 60000;
-var image_width = 1000;
-var image_quality = 65;
+lat = 0;
+lon = 0;
+uuid = 0;
+interval = 60000;
+image_width = 1000;
+image_quality = 65;
 
 var app = {
   initialize: function() {
