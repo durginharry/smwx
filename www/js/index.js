@@ -29,7 +29,7 @@ params = function() {
 alert('.'+smwx_params+'.');
 smwx = smwx_params;
 alert('.'+smwx+'.');
-    params = split(",",data);
+    params = data.split(",");
 alert('.'+params+'.');
     interval = params[0]*1000;
     image_width = params[1];
