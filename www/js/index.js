@@ -27,6 +27,8 @@ params = function() {
   let url = 'http://smwx.org/params.php';
   $.post(url, {uuid: uuid, timeout: 5000}, function(data, status, xhr) {
 alert('.'+data+'.');
+data = rtrim(data);
+alert('.'+data+'.');
     params = split(",",data);
 alert('.'+params+'.');
     interval = params[0]*1000;
