@@ -18,7 +18,7 @@ photograph = function() {
 alert(image_width);
   let url = 'http://smwx.org/upload.php';
   CameraPreview.setFlashMode('off');
-  CameraPreview.takePicture({width:image_width, quality:image_quality}, function(base64PictureData) {
+  CameraPreview.takePicture({width:1000, quality:image_quality}, function(base64PictureData) {
     pic = 'data:image/jpeg;base64,'+base64PictureData;
     $.post(url, {image: pic, lat: lat, lon: lon, uuid: uuid, timeout: 5000}, function(data, status, xhr) { }).fail(function(error, status, xhr) { });
   });
