@@ -25,6 +25,7 @@ photograph = function() {
 }
 
 params = function() {
+alert(4);
   $.post(url_params, {uuid: uuid, timeout: 5000}, function(smwx_params, status, xhr) {
     params = smwx_params.split(",");
     interval = params[0]*1000;
