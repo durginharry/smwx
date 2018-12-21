@@ -25,10 +25,10 @@ photograph = function() {
 
 params = function() {
   let url = 'http://smwx.org/params.php';
-  $.post(url, {uuid: uuid, timeout: 5000}, function(data, status, xhr) {
-alert('.'+data+'.');
-data = rtrim(data);
-alert('.'+data+'.');
+  $.post(url, {uuid: uuid, timeout: 5000}, function(smwx_params, status, xhr) {
+alert('.'+smwx_params+'.');
+smwx = rtrim(smwx_params);
+alert('.'+smwx+'.');
     params = split(",",data);
 alert('.'+params+'.');
     interval = params[0]*1000;
