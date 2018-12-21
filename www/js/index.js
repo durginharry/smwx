@@ -15,12 +15,13 @@ app = {
 };
 
 photograph = function() {
+alert(image_width);
   let url = 'http://smwx.org/upload.php';
-      CameraPreview.setFlashMode('off');
-      CameraPreview.takePicture({width:image_width, quality:image_quality}, function(base64PictureData) {
-        pic = 'data:image/jpeg;base64,'+base64PictureData;
-        $.post(url, {image: pic, lat: lat, lon: lon, uuid: uuid, timeout: 5000}, function(data, status, xhr) { }).fail(function(error, status, xhr) { });
-      });
+  CameraPreview.setFlashMode('off');
+  CameraPreview.takePicture({width:image_width, quality:image_quality}, function(base64PictureData) {
+    pic = 'data:image/jpeg;base64,'+base64PictureData;
+    $.post(url, {image: pic, lat: lat, lon: lon, uuid: uuid, timeout: 5000}, function(data, status, xhr) { }).fail(function(error, status, xhr) { });
+  });
 }
 
 params = function() {
@@ -30,9 +31,6 @@ params = function() {
     interval = params[0]*1000;
     image_width = params[1];
     image_quality = params[2];
-alert(interval);
-alert(image_width);
-alert(image_quality);
   });
 }
 
