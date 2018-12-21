@@ -5,7 +5,7 @@ interval = 60000;
 image_width = 1000;
 image_quality = 65;
 
-var app = {
+app = {
   initialize: function() {
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
   },
@@ -14,21 +14,21 @@ var app = {
   receivedEvent: function(id) {}
 };
 
-var photograph=function() {
-  let url='http://smwx.org/upload.php';
+photograph = function() {
+  let url = 'http://smwx.org/upload.php';
       CameraPreview.setFlashMode('off');
       CameraPreview.takePicture({width:image_width, quality:image_quality}, function(base64PictureData) {
-        var pic='data:image/jpeg;base64,'+base64PictureData;
+        pic = 'data:image/jpeg;base64,'+base64PictureData;
         $.post(url, {image: pic, lat: lat, lon: lon, uuid: uuid, timeout: 5000}, function(data, status, xhr) { }).fail(function(error, status, xhr) { });
       });
 }
 
-var params=function() {
-  let url='http://smwx.org/params.php';
+params = function() {
+  let url = 'http://smwx.org/params.php';
   $.post(url, {uuid: uuid, timeout: 5000}, function($data, status, xhr) {
 alert($data);
 alert(123);
-    var $params = explode(',',$data);
+    $params = explode(',',$data);
 alert(4);
     interval = $params[0]*1000;
     image_width = $params[1];
@@ -51,26 +51,26 @@ async function photos() {
 }
 
 async function processArray() {
-  for (var i=0; i<Infinity; i++) { 
+  for (var i = 0; i < Infinity; i++) { 
      await photos();
   };
 }
 
 function onError(e) {
-  alert('code='+e.code+'\n'+e.message);
+  alert('code = '+e.code+'\n'+e.message);
 }
 
 function onSuccess(position) {
-  lat=position.coords.latitude;
-  lon=position.coords.longitude;
+  lat = position.coords.latitude;
+  lon = position.coords.longitude;
 }
 function get_uuid(uuid_value) {
-  uuid=uuid_value;
+  uuid = uuid_value;
 }
 
 app.initialize();
 window.plugins.uniqueDeviceID.get(get_uuid);
-navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 10000 });
+navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 5000 });
 CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 CameraPreview.hide();
 processArray();
