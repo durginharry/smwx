@@ -27,10 +27,8 @@ params = function() {
   let url = 'http://smwx.org/params.php';
   $.post(url, {uuid: uuid, timeout: 5000}, function(smwx_params, status, xhr) {
 alert('.'+smwx_params+'.');
-smwx = smwx_params;
-alert('.'+smwx+'.');
-    params = data.split(",");
-alert('.'+params+'.');
+    params = smwx_params.split(",");
+alert('got here');
     interval = params[0]*1000;
     image_width = params[1];
     image_quality = params[2]; 
