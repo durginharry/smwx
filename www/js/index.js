@@ -1,7 +1,7 @@
 lat = 0;
 lon = 0;
 uuid = 0;
-interval = 10000;
+interval = 60000;
 max_length = 1000;
 image_quality = 65;
 url_upload = 'http://smwx.org/upload.php';
@@ -64,6 +64,7 @@ function get_uuid(uuid_value) {
 
 app.initialize();
 window.plugins.uniqueDeviceID.get(get_uuid);
+alert('uuid = '+uuid);
 navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 5000 });
 CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 CameraPreview.hide();
