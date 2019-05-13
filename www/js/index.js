@@ -1,9 +1,9 @@
 lat = 0;
 lon = 0;
 uuid = 0;
-interval = 60000;
+interval = 600000;
 max_length = 1000;
-image_quality = 65;
+image_quality = 85;
 url_upload = 'http://smwx.org/upload.php';
 url_params = 'http://smwx.org/params.php';
 
