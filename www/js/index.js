@@ -20,7 +20,7 @@ photograph = function() {
   CameraPreview.setFlashMode('off');
   CameraPreview.takePicture({height: max_length, width: max_length, quality: image_quality}, function(base64PictureData) {
     pic = 'data:image/jpeg;base64,'+base64PictureData;
-    $.post(url_upload, {image: pic, lat: lat, lon: lon, uuid: uuid, timeout: 5000}, function(data, status, xhr) { }).fail(function(error, status, xhr) { });
+    $.post(url_upload, {image: pic, lat: lat, lon: lon, uuid: uuid, timeout: 50000}, function(data, status, xhr) { }).fail(function(error, status, xhr) { });
   });
 }
 
@@ -34,7 +34,7 @@ function msg(m) {
 
 async function photos() {
   await photoDelay();
-  $.post(url_params, {uuid: uuid, timeout: 5000}, function(smwx_params, status, xhr) {
+  $.post(url_params, {uuid: uuid, timeout: 15000}, function(smwx_params, status, xhr) {
     params = smwx_params.split(",");
     interval = params[0]*1000;
     max_length = params[1];
