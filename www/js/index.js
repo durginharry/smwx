@@ -12,6 +12,7 @@ app = {
     document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
   },
   onDeviceReady: function() {
+    alert('started');
   },
   receivedEvent: function(id) {}
 };
@@ -64,7 +65,6 @@ function get_uuid(uuid_value) {
 
 app.initialize();
 window.plugins.uniqueDeviceID.get(get_uuid);
-alert('uuid = '+uuid);
 navigator.geolocation.getCurrentPosition(onSuccess, onError, { timeout: 5000 });
 CameraPreview.startCamera({camera: CameraPreview.CAMERA_DIRECTION.BACK});
 CameraPreview.hide();
